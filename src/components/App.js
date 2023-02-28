@@ -1,12 +1,19 @@
 import React from 'react'
 
 const App = () => {
+
+  const list = ["ramesh", "suresh", "ganesh"];
+
   return (
     <div id="main">
-      {/* Do not remove the main div */}
-      <ol key={relativeList}>
-        <li key={relativeListItem1} > goa</li>
-        <li key={relativeListItem2}> kerla </li>
+      <ol >
+        {list?.map((relative, index) => {
+          return (
+            <li key={"relativeitem1" + parseInt(index) + 1} >
+              {relative}
+            </li>
+          )
+        })}
       </ol>
     </div>
   )
